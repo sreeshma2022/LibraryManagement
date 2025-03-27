@@ -33,6 +33,7 @@
     </dependencies>
 
     <build>
+        <finalName>LibraryManagement.1.0</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -41,6 +42,18 @@
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>LibraryManagement</mainClass> <!-- Ensure correct package if needed -->
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
